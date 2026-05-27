@@ -1,0 +1,88 @@
+/* 1. All @import statements first */
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Outfit:wght@400;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* 2. Override the default dark variant so it reacts to the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 3. Light mode (default) — no change */
+@theme {
+  --color-bg: #f8fafc;
+  --color-sidebar: #e2e8f0;
+  --color-card: #ffffff;
+  --color-cardHigh: #f1f5f9;
+  --color-hover: #e2e8f0;
+  --color-active: #cbd5e1;
+  --color-border: rgba(148, 196, 255, 0.15);
+  --color-borderMid: rgba(148, 196, 255, 0.3);
+
+  --color-gold: #b45309;
+  --color-goldB: #d97706;
+  --color-goldBg: rgba(217, 119, 6, 0.1);
+
+  --color-green: #059669;
+  --color-greenBg: rgba(5, 150, 105, 0.1);
+
+  --color-red: #dc2626;
+  --color-redBg: rgba(220, 38, 38, 0.1);
+
+  --color-blue: #2563eb;
+  --color-blueBg: rgba(37, 99, 235, 0.1);
+
+  --color-purple: #7c3aed;
+  --color-purpleBg: rgba(124, 58, 237, 0.1);
+
+  --color-orange: #ea580c;
+  --color-orangeBg: rgba(234, 88, 12, 0.1);
+
+  --color-pink: #db2777;
+  --color-pinkBg: rgba(219, 39, 119, 0.1);
+
+  --color-t1: #1e293b;
+  --color-t2: #475569;
+  --color-t3: #94a3b8;
+}
+
+/* 4. All dark-mode overrides go inside a .dark block */
+.dark {
+  --color-bg: #05111f;
+  --color-sidebar: #030d18;
+  --color-card: #0b1e32;
+  --color-cardHigh: #0f2540;
+  --color-hover: #122a44;
+  --color-active: #163350;
+  --color-border: rgba(148, 196, 255, 0.07);
+  --color-borderMid: rgba(148, 196, 255, 0.14);
+
+  --color-gold: #f0a31a;
+  --color-goldB: #ffbe4a;
+  --color-goldBg: rgba(240, 163, 26, 0.1);
+
+  --color-green: #12d49a;
+  --color-greenBg: rgba(18, 212, 154, 0.09);
+
+  --color-red: #f44f70;
+  --color-redBg: rgba(244, 79, 112, 0.09);
+
+  --color-blue: #4d9af8;
+  --color-blueBg: rgba(77, 154, 248, 0.09);
+
+  --color-purple: #a78bfa;
+  --color-purpleBg: rgba(167, 139, 250, 0.09);
+
+  --color-orange: #ff7f41;
+  --color-orangeBg: rgba(255, 127, 65, 0.09);
+
+  --color-pink: #f472b6;
+  --color-pinkBg: rgba(244, 114, 182, 0.09);
+
+  --color-t1: #ddeeff;
+  --color-t2: #5a8db0;
+  --color-t3: #243d56;
+}
+
+@layer base {
+  body {
+    font-family: "Outfit", system-ui, sans-serif;
+  }
+}
